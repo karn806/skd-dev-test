@@ -38,7 +38,7 @@ function Card(){
                 <p className="card-footer-text">{viewCount} คนที่สนใจ</p>
             </div>
             <div className="card-footer-right">
-                <button className="card-footer-button">Action</button>
+                <button className="card-footer-button">Link</button>
             </div>
           </div>
         </div>
