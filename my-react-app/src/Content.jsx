@@ -26,24 +26,28 @@ const Content = () => {
             <p className="card-footer-text">icon</p>
           </div>
           <div className="content-right">
-          <h2>23,453</h2>
+            <div className="text-with-sub">
+              <div className="main-text">20,845</div>
+              <div className="subtext">คะแนนของคุณคือ</div>
+            </div>
           </div>
         </div>
         
+        <div className="content-bottom">
+          <div className="text-with-sub">
+            <div className="main-text">20,845</div>
+            <div className="subtext">คะแนนต่ำสุด 60</div>
+          </div>
 
-        <div className="text-with-sub">
-          <div className="main-text">20,845</div>
-          <div className="subtext">คะแนนต่ำสุด 60</div>
-        </div>
+          <div className="text-with-sub">
+            <div className="main-text">21,845</div>
+            <div className="subtext">คะแนนเฉลี่ย 60</div>
+          </div>
 
-        <div className="text-with-sub">
-          <div className="main-text">21,845</div>
-          <div className="subtext">คะแนนเฉลี่ย 60</div>
-        </div>
-
-        <div className="text-with-sub">
-          <div className="main-text">22,845</div>
-          <div className="subtext">คะแนนสูงสุด 60</div>
+          <div className="text-with-sub">
+            <div className="main-text">22,845</div>
+            <div className="subtext">คะแนนสูงสุด 60</div>
+          </div>
         </div>
       </div>
     );

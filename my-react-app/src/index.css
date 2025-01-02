@@ -3,7 +3,7 @@
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  max-width: 300px;
+  max-width: 500px;
   margin: 16px;
   font-family: Arial, sans-serif;
 }
@@ -125,11 +125,19 @@
   margin: "0 5px";
 }
 
-.text-with-sub {
+.content-bottom {
+  padding: 10px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.text-with-sub {
+  justify-content: space-between;
+  align-items: center;
   text-align: center;
+  display: 'flex';
+  flex-direction: 'column';
 }
 
 .main-text {
@@ -142,4 +150,5 @@
   font-size: 14px;
   color: #777; /* Lighter color for subtext */
   display: block;
+  align-self: flex-end;
 }
