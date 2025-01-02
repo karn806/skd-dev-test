@@ -1,13 +1,3 @@
-const sectionData = {
-  section1: ["1", "2", "3", "4", "5"],
-  section2: { number: "123", subtext: "This is subtext" },
-  section3: [
-    { label: "20,875", subtext: "คะแนนต่ำสุด 60" },
-    { label: "21,345", subtext: "คะแนนเฉลี่ย 60" },
-    { label: "23,415", subtext: "คะแนนสูงสุด 60" },
-  ],
-};
-
 const Content = () => {
     return (
       <div className="card-content">
