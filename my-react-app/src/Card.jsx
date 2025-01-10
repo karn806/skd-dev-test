@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import Content from "./Content";
+import CardContent from "./CardContent";
 import CardHeader from "./CardHeader";
 import CardFooter from "./CardFooter";
 import Collapsible from 'react-collapsible';
@@ -11,7 +11,7 @@ function Card(props){
                 <CardHeader logo={props.record.logo} name={props.record.name} faculty={props.record.faculty} />
             </div>
             <div className="card-content">
-                <Content roundSeats={props.record.roundSeats} score={props.record.score}/>
+                <CardContent roundSeats={props.record.roundSeats} score={props.record.score}/>
             </div>
 
             <div className="card-content">
