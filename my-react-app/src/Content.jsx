@@ -36,6 +36,7 @@ function Content(props) {
         </div>
         <div className="your-score-container">
           <div className="your-score-label">คะแนนของคุณคือ</div>
+          {/* ไม่แน่ใจว่าคะแนนของคุณเอามาจากไหนค่ะ ก็เลยใส่เป็นเลข mock ไป */}
           <div className="your-score-value">{props.score ? "23,456" : "ไม่มีข้อมูล"}</div>
         </div>
       </div>
