@@ -10,7 +10,7 @@ function CardFooter(props) {
                 <PersonIcon/>
                 <p className="card-footer-text">{props.likes} คนที่สนใจ</p>
             </div>
-            <div>
+            <div className="content-right">
                 <p>
                     <IconButton color="primary" aria-label="add">
                         <IosShareIcon />

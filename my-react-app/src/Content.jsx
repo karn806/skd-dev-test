@@ -38,10 +38,16 @@ function Content(props) {
           <div className="score-value">{props.score ? props.score.min : "ไม่มีข้อมูล"}</div>
           <div className="score-label">คะแนนต่ำสุด</div>
         </div>
+
+        <div className="vertical-line"></div>
+
         <div className="score-container">
           <div className="score-value">{props.score ? props.score.avg : "ไม่มีข้อมูล"}</div>
           <div className="score-label">คะแนนเฉลี่ย</div>
         </div>
+
+        <div className="vertical-line"></div>
+        
         <div className="score-container">
           <div className="score-value">{props.score ? props.score.max : "ไม่มีข้อมูล"}</div>
           <div className="score-label">คะแนนสูงสุด</div>

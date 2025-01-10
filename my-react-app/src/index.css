@@ -80,7 +80,7 @@
   display: flex;
   justify-content: space-between; /* Distributes items to opposite ends */
   align-items: center; /* Aligns items vertically (optional) */
-  /* padding: 10px; */
+  padding: 10px;
 }
 
 .card-footer-left {
@@ -128,6 +128,13 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.vertical-line {
+  width: 1px; /* Width of the vertical line */
+  background-color: #000; /* Color of the line */
+  height: 100%; /* Stretch to match the height of the container */
+  align-self: stretch; /* Ensures the line stretches to the container's height */
 }
 
 .score-container {
