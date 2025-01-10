@@ -1,57 +1,42 @@
-const Content = () => {
-    return (
-      <div className="card-content">
-        <div className="content-left-right">
-          <div className="content-left">
-            <p className="card-footer-text">รอบที่เปิด</p>
-          </div>
-          <div className="content-right">
-            <div>
-              {["1", "2", "3", "4", "5"].map((num) => (
-                <span key={num}>{num}</span>
-              ))}
-            </div>
-          </div>
-        </div>
-        <div className="content-left-right">
-          <div className="content-left">
-            <p className="card-footer-text">รอบที่ 4: Admission</p>
-          </div>
-          <div className="content-right">
-            <button className="card-footer-button">แก้ไขคะแนน</button>
-          </div>
-        </div>
-        <div className="content-left-right">
-          <div className="content-left">
-            <p className="card-footer-text">icon</p>
-          </div>
-          <div className="content-right">
-            <div className="text-with-sub">
-              <div className="main-text">20,845</div>
-              <div className="subtext">คะแนนของคุณคือ</div>
-            </div>
-          </div>
-        </div>
-        
-        <div className="content-bottom">
-          <div className="text-with-sub">
-            <div className="main-text">20,845</div>
-            <div className="subtext">คะแนนต่ำสุด 60</div>
-          </div>
-
-          <div className="text-with-sub">
-            <div className="main-text">21,845</div>
-            <div className="subtext">คะแนนเฉลี่ย 60</div>
-          </div>
-
-          <div className="text-with-sub">
-            <div className="main-text">22,845</div>
-            <div className="subtext">คะแนนสูงสุด 60</div>
-          </div>
+/* eslint-disable react/prop-types */
+function Content(props) {
+  return (
+    <div>
+      <div className="content-left-right">
+        <div className="content-left">
+          <h4>รอบที่เปิด: {props.roundSeats.map((seat, index) => (
+            <span key={index}>
+              {seat}{index < props.roundSeats.length - 1 && '  '}
+            </span>
+          ))}</h4>
         </div>
       </div>
-    );
-  };
-  
-  export default Content;
-  
+
+      <div className="content-left-right">
+        <div className="content-left">
+          <p>รอบที่ 4: {props.score ? props.score.scoreType : "ไม่มีข้อมูล"}</p>
+        </div>
+        <div className="content-right">
+          <button className="card-footer-button">แก้ไขคะแนน</button>
+        </div>
+      </div>
+
+      <div className="content-bottom">
+        <div className="text-with-sub">
+          <div className="main-text">{props.score ? props.score.min : "ไม่มีข้อมูล"}</div>
+          <div className="subtext">คะแนนต่ำสุด</div>
+        </div>
+        <div className="text-with-sub">
+          <div className="main-text">{props.score ? props.score.avg : "ไม่มีข้อมูล"}</div>
+          <div className="subtext">คะแนนเฉลี่ย</div>
+        </div>
+        <div className="text-with-sub">
+          <div className="main-text">{props.score ? props.score.max : "ไม่มีข้อมูล"}</div>
+          <div className="subtext">คะแนนสูงสุด</div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export default Content

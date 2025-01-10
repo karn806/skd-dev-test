@@ -85,7 +85,7 @@
 }
 
 .card-footer-left {
-  display: flex;
+  display: inline-flex;
   align-items: center;
 }
 

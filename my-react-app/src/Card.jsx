@@ -1,29 +1,20 @@
-import { useState, useEffect } from 'react';
+/* eslint-disable react/prop-types */
 import Content from "./Content";
 import Collapsible from 'react-collapsible';
-import pic from './assets/gears.png';
 
-function Card(){
-    const [viewCount, setViewCount] = useState(0);
-
-    useEffect(() => {
-        // Simulate fetching view count from server or incrementing it locally
-        const count = Math.floor(Math.random() * 1000) + 1; // Example random number for views
-        setViewCount(count);
-    }, []);
-
+function Card(props){
     return (
         <div className="card">
             <div className="card-header">
-                <img src={pic}  className="card-image" />
+                <img src={props.record.logo}  className="card-image" />
                 <div className="card-titles">
-                    <h2 className="card-title">คณะวิศวกรรมศาสตร์</h2>
-                    <h3 className="card-subtitle">สาขาวิศวกรรมทั้วไป</h3>
-                    <p>จุฬา</p>
+                    <h2 className="card-title">{props.record.faculty.name}</h2>
+                    <h3 className="card-subtitle">{props.record.name}</h3>
+                    <p>{props.record.faculty.university.name}</p>
                 </div>
             </div>
             <div className="card-content">
-                <Content/>
+                <Content roundSeats={props.record.roundSeats} score={props.record.score}/>
             </div>
 
             <div className="card-content">
@@ -35,7 +26,7 @@ function Card(){
 
           <div className="card-footer">
             <div className="card-footer-left">
-                <p className="card-footer-text">{viewCount} คนที่สนใจ</p>
+                <p className="card-footer-text">{props.record.likes} คนที่สนใจ</p>
             </div>
             <div className="card-footer-right">
                 <button className="card-footer-button">Link</button>
